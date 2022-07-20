@@ -624,6 +624,14 @@ PrefabInstance:
       propertyPath: yRange
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4112097004830284, guid: 730b2b8f161d33e4bb491fdfc896e67b, type: 3}
+      propertyPath: positionYawFactor
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112097004830284, guid: 730b2b8f161d33e4bb491fdfc896e67b, type: 3}
+      propertyPath: controlPitchFactor
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 5221197562191056189, guid: 730b2b8f161d33e4bb491fdfc896e67b, type: 3}
       propertyPath: m_Name
       value: Player Ship
@@ -638,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223658273635621675, guid: 730b2b8f161d33e4bb491fdfc896e67b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.88
       objectReference: {fileID: 0}
     - target: {fileID: 5223658273635621675, guid: 730b2b8f161d33e4bb491fdfc896e67b, type: 3}
       propertyPath: m_LocalPosition.z

@@ -10,20 +10,26 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float yRange;
 
     [SerializeField] float positionPitchFactor = 2f;
+    [SerializeField] float controlPitchFactor = -10f;
+    [SerializeField] float positionYawFactor = 2f;
+    [SerializeField] float controlRollFactor = 5f;
     float yThrow;
     float xThrow;
     // Update is called once per frame
     void Update()
     {
         ProcessTranslation();
-        
+        ProcessRotation();
     }
 
     public void ProcessRotation()
     {
-        float pitch = transform.localPosition.y * positionPitchFactor + yThrow;
-        float yaw = 0f;
-        float roll = 0f;
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControlThrow = yThrow * controlPitchFactor;
+
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch,yaw,roll);
     }
