@@ -12,7 +12,10 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float positionPitchFactor = 2f;
     [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 2f;
-    [SerializeField] float controlRollFactor = 5f;
+    [SerializeField] float controlRollFactor = -20f;
+
+    [SerializeField] GameObject[] laser;
+
     float yThrow;
     float xThrow;
     // Update is called once per frame
@@ -20,6 +23,36 @@ public class PlayerControls : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
+    }
+
+    public void ProcessFiring()
+    {
+        
+        if (Input.GetButton("Fire1"))
+        {
+            ActiveLasers();
+        }
+        else
+        {
+            DeactivateLasers();
+        }    
+    }
+    
+    public void ActiveLasers()
+    {
+        foreach (GameObject laser in laser)
+        {
+            laser.SetActive(true);
+        }
+    }
+
+    public void DeactivateLasers()
+    {
+        foreach(GameObject laser in laser)
+        {
+            laser.SetActive(false);
+        }
     }
 
     public void ProcessRotation()
