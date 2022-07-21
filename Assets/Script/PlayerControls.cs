@@ -5,16 +5,27 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+    [Header("Cài đặt thiết lập chung")]
+    [Tooltip("Khoảng cách tàu di chuyển lên xuống dựa trên cài đặt người chơi")] 
     [SerializeField] float controlSpeed;
+
+    [Tooltip("Khoảng cách người chơi di chuyển theo chiều ngang (horizontally)")] 
     [SerializeField] float xRange;
+    [Tooltip("Khoảng cách người chơi di chuyển theo chiều dọc (vertically)")] 
     [SerializeField] float yRange;
 
+    [Header("Số lượng súng")]
+    [Tooltip("Nhập số lượng súng người chơi muốn")]
+    [SerializeField] GameObject[] laser;
+
+    [Header("điều chỉnh dựa trên vị trí màn hình")]
     [SerializeField] float positionPitchFactor = 2f;
-    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 2f;
+
+    [Header("điều chỉnh dựa trên đầu vào của trình phát")]
+    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float controlRollFactor = -20f;
 
-    [SerializeField] GameObject[] laser;
 
     float yThrow;
     float xThrow;
