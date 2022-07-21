@@ -238,6 +238,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc18780087c16d449a9909a9051bfe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &322136910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6951720852360689375, guid: 213c45333cb09a146b914d3f854bb14f, type: 3}
+  m_PrefabInstance: {fileID: 6129060722640393983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &322136916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322136910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd5b0dd2f715a24692abfb7b7cd5953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlSpeed: 30
+  xRange: 7
+  yRange: 7
+  laser:
+  - {fileID: 733572551}
+  - {fileID: 1687150629}
+  positionPitchFactor: 2
+  positionYawFactor: 2
+  controlPitchFactor: -10
+  controlRollFactor: -20
+--- !u!114 &322136917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322136910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f0f9af2d492e4994da180b55a2e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadDelay: 1
 --- !u!1 &401252369
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +540,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 58.402, y: 432.387, z: -209.66}
+--- !u!1 &733572551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 536407026266693262, guid: 213c45333cb09a146b914d3f854bb14f, type: 3}
+  m_PrefabInstance: {fileID: 6129060722640393983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1687150629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8192251970687620466, guid: 213c45333cb09a146b914d3f854bb14f, type: 3}
+  m_PrefabInstance: {fileID: 6129060722640393983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1800276596
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,5 +801,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8944275828224052030, guid: 213c45333cb09a146b914d3f854bb14f, type: 3}
+    - {fileID: 740430682, guid: 213c45333cb09a146b914d3f854bb14f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 213c45333cb09a146b914d3f854bb14f, type: 3}
