@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 3654299197670503435}
   - component: {fileID: 3645497207373537223}
   - component: {fileID: 3657887030736465979}
+  - component: {fileID: 4379410467044679519}
   m_Layer: 0
   m_Name: Whoppa
   m_TagString: Untagged
@@ -727,11 +728,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc18780087c16d449a9909a9051bfe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 9054493454896766344, guid: 7ef1bdd05772136439fd4ccfc9a5de6e, type: 3}
+  deathFX: {fileID: 9054493454896766344, guid: 7ef1bdd05772136439fd4ccfc9a5de6e, type: 3}
   hitVFX: {fileID: 9054493454896766344, guid: 6f701221605ed074ca09e890e41dd6e2, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 400
   hitPoints: 30
+--- !u!65 &4379410467044679519
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658666125836367989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.638825, y: 3.256053, z: 10.850526}
+  m_Center: {x: 0, y: -0.0000007748604, z: 0}
 --- !u!1 &3696406219495006234
 GameObject:
   m_ObjectHideFlags: 0
