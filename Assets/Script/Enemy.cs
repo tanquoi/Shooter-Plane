@@ -17,14 +17,14 @@ public class Enemy : MonoBehaviour
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         parent = GameObject.FindWithTag("SpawnAtRuntime");
-        Addrigidbody();
+        //Addrigidbody();
     }
 
-    private void Addrigidbody()
-    {
-        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
-        rb.useGravity = false;
-    }
+    //private void Addrigidbody()
+    //{
+    //    Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+    //    rb.useGravity = false;
+    //}
 
     public void OnParticleCollision(GameObject other)
     {
