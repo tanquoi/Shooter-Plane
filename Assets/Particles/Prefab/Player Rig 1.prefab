@@ -65,6 +65,7 @@ GameObject:
   - component: {fileID: 6129060723293076363}
   - component: {fileID: 6129060723293076364}
   - component: {fileID: 6129060723293076365}
+  - component: {fileID: 1192028545}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -138,6 +139,66 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6129060723293076366}
   m_Enabled: 1
+--- !u!114 &1192028545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6129060723293076366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 6129060723293076363}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 1
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &6951720852360689375
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,9 +209,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2604426319120947521}
   - component: {fileID: 4027144158472034740}
-  - component: {fileID: 8944275828224052030}
   - component: {fileID: 3289339836761648873}
   - component: {fileID: 5361948220835156088}
+  - component: {fileID: 322136916}
+  - component: {fileID: 322136917}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -187,20 +249,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.904778, y: 3.4248834, z: 12.419048}
   m_Center: {x: -0.13994217, y: -0.11906409, z: 1.7061405}
---- !u!114 &8944275828224052030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6951720852360689375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4f0f9af2d492e4994da180b55a2e28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadDelay: 1
-  crashVFX: {fileID: 6286137236680917698}
 --- !u!54 &3289339836761648873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -239,6 +287,42 @@ MonoBehaviour:
   positionYawFactor: 2
   controlPitchFactor: -15
   controlRollFactor: -20
+--- !u!114 &322136916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951720852360689375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd5b0dd2f715a24692abfb7b7cd5953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlSpeed: 30
+  xRange: 7
+  yRange: 7
+  laser:
+  - {fileID: 536407026266693262}
+  - {fileID: 8192251970687620466}
+  positionPitchFactor: 2
+  positionYawFactor: 2
+  controlPitchFactor: -10
+  controlRollFactor: -20
+--- !u!114 &322136917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951720852360689375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f0f9af2d492e4994da180b55a2e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadDelay: 1
+  crashVFX: {fileID: 6286137236680917698}
 --- !u!1001 &3808829633832459329
 PrefabInstance:
   m_ObjectHideFlags: 0
